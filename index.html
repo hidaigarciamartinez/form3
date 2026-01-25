@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario multipasos</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step active"
+            data-title="Personal" aria-current="step">1</div>
+            <div class="progress-step"
+            data-title="Seguimiento">2</div>
+            <div class="progress-step"
+            data-title="Antecedentes" >3</div>
+            <div class="progress-step"
+            data-title="Accesibilidad" >4</div> 
+        </div>
+       </div>
+    <form id="multi-step-form" novalidate >
+        <!--Step 1-->
+        <div class="form-step active" data-step="1">
+            <h2>Información Personal </h2>
+            <div class="input-group">
+                <label for="firstName">Nombre</label>
+                <input type="text" id="firstName"
+                name="firstName" required>
+                <span class="error-message" 
+                aria-live="polite"></span>
+            </div>
+            <div class="input-group">
+                <label for="lastName">Apellidos</label>
+                <input type="text" id="lastName"
+                name="lastName" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+            <div class="input-group">
+                <label for="cumpleaños">Fecha de Nacimiento</label>
+                <input type="date" id="cumpleaños"
+                name="cumpleaños" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+             <div class="input-group">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad"
+                name="edad" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+
+              <div class="input-group">
+                <label for="genero">Género</label>
+                <select id="genero" 
+                name="genero" required>
+                <option value="">Selecc..</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="civil">Estado Civil</label>
+                <select id="civil" 
+                name="civil" required>
+                <option value="">Selecc..</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="divorciado">Divorciado</option>
+                <option value="viudo">Viudo</option>
+                <option value="otro">Otro</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+            <div class="input-group">
+                <label for="nacion">Nacionalidad</label>
+                <input type="text" id="nacion"
+                name="nacion" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="prof">Profesión/Ocupación</label>
+                <input type="text" id="prof"
+                name="prof" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+          <div class="input-group">
+                <label for="phone">Número telefonico</label>
+                <input type="tel" id="phone"
+                name="phone" required pattern="[0-9]{10}">
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+
+             <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email"
+                name="email" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Dirección</label>
+                <input type="text" id="address"
+                name="address" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>  
+            <div class="btns-group">
+                <button type="button" class="btn btn-next"
+                aria-label="Next step">Siguiente</button>
+        </div>
+     </div>
+
+     <!--Step 2-->
+     <div class="form-step" data-step="2">
+            <h2>Seguimiento </h2>
+           <div class="input-group">
+  <label>Medio por el cual se enteró de la iglesia</label>
+
+  <!-- Invitación -->
+  <p class="main-option">Invitación de una persona</p>
+  <div id="inv-content" class="sub-options">
+    <input type="text" name="quienInvito" placeholder="¿Quién lo invitó?" />
+  </div>
+
+  <!-- Redes -->
+  <p class="main-option">Redes sociales</p>
+  <div id="redes-content" class="sub-options">
+    <select name="redSocial">
+      <option value="">Seleccione una red</option>
+      <option value="Facebook">Facebook</option>
+      <option value="Instagram">Instagram</option>
+      <option value="YouTube">YouTube</option>
+    </select>
+  </div>
+
+  <!-- Evento -->
+  <p class="main-option">Evento</p>
+  <div id="evento-content" class="sub-options">
+    <input type="text" name="nombreEvento" placeholder="Nombre del evento" />
+  </div>
+
+  <!-- Otro -->
+  <p class="main-option">Otro</p>
+  <div id="otro-content" class="sub-options">
+    <input type="text" name="otroTexto" placeholder="¿Cuál?" />
+  </div>
+</div>
+            
+            <div class="input-group">
+                <label for="pvisita">Fecha aproximada de su primera visita a la iglesia PV </label>
+                <input type="date" id="pvisita"
+                name="pvisita" required>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+           <div class="input-group">
+                <label for="Chat">¿Desea ser incluido en el chat de la iglesia?</label>
+                <select id="Chat" 
+                name="Chat" required>
+                <option value="">Selecc..</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+             <div class="input-group">
+                <label for="Contactado">¿Desea ser contactado?</label>
+                <select id="Contactado" 
+                name="Contactado" required>
+                <option value="">Selecc..</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+             <div class="btns-group">
+                <button type="button" class="btn btn-prev"
+                aria-label="Previous step">Anterior</button>
+                <button type="button" class="btn btn-next"
+                aria-label="Next step">Siguiente</button>
+            </div>
+      </div>
+ <!--Step 3-->
+
+ <div class="form-step " data-step="3">
+            <h2>Antecedentes </h2>
+            <div class="input-group">
+                <label for="Pertenece">¿Pertenece actualmente a alguna iglesia?</label>
+                <select id="Pertenece" 
+                name="Pertenece" required>
+                <option value="">Selecc..</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+           <div class="input-group">
+                <label for="Cristiano">¿Se considera Cristiano?</label>
+                <select id="Cristiano" 
+                name="Cristiano" required>
+                <option value="">Selecc..</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="No estoy seguro">No estoy seguro</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div> 
+             <div class="input-group">
+                <label for="Bautizado">¿Se ha bautizado?</label>
+                <select id="Bautizado" 
+                name="Bautizado" required>
+                <option value="">Selecc..</option>
+                <option value="Si">No</option>
+                <option value="No">Si</option>
+                </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+             <div class="btns-group">
+                <button type="button" class="btn btn-prev"
+                aria-label="Previous step">Anterior</button>
+                <button type="button" class="btn btn-next"
+                aria-label="Next step">Siguiente</button>
+        </div>
+ </div>
+
+ <!--Step 4-->
+ <div class="form-step" data-step="4">
+    <h2>Revisa la Información </h2>
+    <div class="summary">
+        <p>Porfavor verificar que la información sea correcta antes de guardar</p>
+        <div id="form-summary"></div>
+    </div>
+    <div class="btns-group">
+        <button type="button" class="btn btn-prev"
+        aria-label="Previous step">Anterior</button>
+        <button type="submit"  class="btn btn-submit"
+        aria-label="Submit form">Guardar</button>
+    </div>
+ </div>
+</form>
+ 
+<!--Mensaje de exito-->
+<div class="form-success" style="display: none;">
+    <div class="success-icon">✓</div>
+    <h2>Guardado exitoso!</h2>
+    <p>Gracias por llenarlo</p>
+    <p>La confirmación del email ha sido enviado a <span
+         id="success-email"></span>.</p>
+    <div class="success-btns">
+        <button type="button" class="btn btn-new"
+        aria-label="Start new form">Nuevo Formulario</button>
+    </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
