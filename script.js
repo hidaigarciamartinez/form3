@@ -13,7 +13,11 @@ const successSection = document.querySelector('.form-success');
 const formData = {
     personal: {},
     contact: {},
-    professional: {}
+    professional: {},
+    accesibilidad:{},
+    identidad:{},
+    consentimiento:{},
+
 };
 
 let currentStep = 0;
@@ -212,14 +216,17 @@ function loadFormData() {
 }
 
 function getStepCategory(step) {
-    return ['personal', 'contact', 'professional'][step] || 'otro';
+    return ['personal', 'contact', 'professional','accesibilidad','identidad','consentimiento'][step] || 'otro';
 }
 
 function updateFormSummary() {
     const sectionTitles = {
         personal: 'Información personal',
-        contact: 'Información de contacto',
-        professional: 'Información profesional'
+        contact: 'Seguimiento',
+        professional: 'Antecedentes',
+        accesibilidad:'Accesibilidad',
+        identidad:'Identidad Cultural',
+        consentimiento:'Consentimiento'
     };
 
     const labels = {
@@ -242,7 +249,7 @@ function updateFormSummary() {
 
     let html = '';
 
-    ['personal', 'contact', 'professional'].forEach(section => {
+    ['personal', 'contact', 'professional','accesibilidad','identidad','consentimiento'].forEach(section => {
         html += `<div class="summary-section">
                 <h3>${sectionTitles[section]}</h3>`;
 
@@ -443,4 +450,6 @@ document.querySelector('[name="otroTexto"]')?.addEventListener('input', e => {
 document.querySelector('[name="redSocial"]')?.addEventListener('change', e => {
   if (e.target.value) marcarRadio('Redes');
 });
+
+
 
