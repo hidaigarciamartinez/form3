@@ -19,6 +19,10 @@
             data-title="Antecedentes" >3</div>
             <div class="progress-step"
             data-title="Accesibilidad" >4</div> 
+            <div class="progress-step"
+            data-title="Identidad " >5</div> 
+            <div class="progress-step"
+            data-title="Consentimiento " >6</div> 
         </div>
        </div>
     <form id="multi-step-form" novalidate >
@@ -156,14 +160,14 @@
   <!-- Otro -->
   <p class="main-option">Otro</p>
   <div id="otro-content" class="sub-options">
-    <input type="text" name="otroTexto" placeholder="¿Cuál?" />
+    <input type="text" name="otroTipo" placeholder="¿Cuál?" />
   </div>
 </div>
             
             <div class="input-group">
-                <label for="pvisita">Fecha aproximada de su primera visita a la iglesia PV </label>
-                <input type="date" id="pvisita"
-                name="pvisita" required>
+                <label for="Primera visita">Fecha aproximada de su primera visita a la iglesia PV </label>
+                <input type="date" id="Primera visita"
+                name="Primera visita" required>
                 <span class="error-message"
                 aria-live="polite"></span>
             </div>
@@ -242,8 +246,66 @@
         </div>
  </div>
 
- <!--Step 4-->
- <div class="form-step" data-step="4">
+ <!-- Step 4 -->
+<div class="form-step" data-step="4">
+            <h2>Accesibilidad </h2>
+              <div class="form-group">     
+        <div class="input-group">
+                <label for="Discapacidad">Discapacidad</label>
+                <select id="Discapacidad" 
+                name="Discapacidad" required>
+                <option value="">Selecc..</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="Motriz">Motriz</option>
+                <option value="Visual">Visual</option>
+                <option value="Auditiva">Auditiva</option>
+                <option value="Intelectual">Intelectual</option>
+                <option value="Psicosocial">Psicosocial</option>
+            </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+           
+             <div class="btns-group">
+                <button type="button" class="btn btn-prev"
+                aria-label="Previous step">Anterior</button>
+                <button type="button" class="btn btn-next"
+                aria-label="Next step">Siguiente</button>
+            </div>
+ </div>
+ </div>
+
+<!-- Step 5 -->
+<div class="form-step" data-step="5">
+            <h2>Identidad </h2>
+              <div class="form-group">     
+        <div class="input-group">
+                <label for="Discapacidad">Discapacidad</label>
+                <select id="Discapacidad" 
+                name="Discapacidad" required>
+                <option value="">Selecc..</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="Motriz">Motriz</option>
+                <option value="Visual">Visual</option>
+                <option value="Auditiva">Auditiva</option>
+                <option value="Intelectual">Intelectual</option>
+                <option value="Psicosocial">Psicosocial</option>
+            </select>
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
+           
+             <div class="btns-group">
+                <button type="button" class="btn btn-prev"
+                aria-label="Previous step">Anterior</button>
+                <button type="button" class="btn btn-next"
+                aria-label="Next step">Siguiente</button>
+            </div>
+ </div>
+ </div>
+
+ <!--Step 6-->
+ <div class="form-step" data-step="6">
     <h2>Revisa la Información </h2>
     <div class="summary">
         <p>Porfavor verificar que la información sea correcta antes de guardar</p>
