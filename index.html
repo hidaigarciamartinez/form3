@@ -266,6 +266,13 @@
                 aria-live="polite"></span>
             </div>
            
+            <div class="input-group">
+                <label for="Ayuda">¿Requiere algún tipo de apoyo para participar en las actividades de la iglesia? Si es así, especifique cuál. </label>
+                <input type="text" id="Ayuda"
+                name="Ayuda" >
+                <span class="error-message"
+                aria-live="polite"></span>
+            </div>
              <div class="btns-group">
                 <button type="button" class="btn btn-prev"
                 aria-label="Previous step">Anterior</button>
@@ -278,22 +285,16 @@
 <!-- Step 5 -->
 <div class="form-step" data-step="5">
             <h2>Identidad </h2>
-              <div class="form-group">     
-        <div class="input-group">
-                <label for="Discapacidad">Discapacidad</label>
-                <select id="Discapacidad" 
-                name="Discapacidad" required>
-                <option value="">Selecc..</option>
-                <option value="Ninguna">Ninguna</option>
-                <option value="Motriz">Motriz</option>
-                <option value="Visual">Visual</option>
-                <option value="Auditiva">Auditiva</option>
-                <option value="Intelectual">Intelectual</option>
-                <option value="Psicosocial">Psicosocial</option>
-            </select>
+<div class="input-group">
+                <label for="Identidad">¿Se identifica o pertenece a algún pueblo indígena o grupo étnico?
+En caso de responder afirmativamente, favor de especificar. </label>
+                <input type="text" id="Identidad"
+                name="Identidad" >
                 <span class="error-message"
                 aria-live="polite"></span>
             </div>
+            
+           
            
              <div class="btns-group">
                 <button type="button" class="btn btn-prev"
@@ -302,7 +303,7 @@
                 aria-label="Next step">Siguiente</button>
             </div>
  </div>
- </div>
+ 
 
  <!--Step 6-->
  <div class="form-step" data-step="6">
@@ -336,3 +337,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+ 
